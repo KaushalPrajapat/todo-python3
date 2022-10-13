@@ -1,14 +1,15 @@
+from crypt import methods
 from flask import Flask, render_template
 
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 def index():
     return render_template('ToDosList.html')
 
 
-@app.route('/contact')
+@app.route('/contact',methods=['GET'])
 def kaushal():
     return render_template('contact.html')
 
