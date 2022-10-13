@@ -6,10 +6,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('ToDosList.html')
+    return render_template('index.html')
 
 
-@app.route('/contact',methods=['GET'])
+@app.route('/contact')
 def kaushal():
     return render_template('contact.html')
 
